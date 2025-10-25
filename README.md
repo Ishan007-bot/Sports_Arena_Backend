@@ -115,7 +115,7 @@ server/
    PORT=5000
    MONGODB_URI=mongodb://localhost:27017/sports_arena
    JWT_SECRET=your_jwt_secret_key_here
-   CLIENT_URL=http://localhost:3000
+   CLIENT_URL=https://sports-arena-frontend.vercel.app/
    ```
 
 4. **Create admin user**
@@ -131,7 +131,7 @@ server/
    ```
 
 6. **Verify server is running**
-   Server runs on [http://localhost:5000](http://localhost:5000)
+   Server runs on [https://sports-arena-backend.onrender.com](https://sports-arena-backend.onrender.com)
 
 ## 🔧 Configuration
 
@@ -140,7 +140,16 @@ server/
 - `PORT` - Server port (default: 5000)
 - `MONGODB_URI` - MongoDB connection string
 - `JWT_SECRET` - Secret key for JWT tokens
-- `CLIENT_URL` - Frontend URL for CORS
+- `CLIENT_URL` - Frontend URL for CORS ([https://sports-arena-frontend.vercel.app/](https://sports-arena-frontend.vercel.app/))
+
+### **Production Configuration**
+For deployed servers, update the following:
+- Set `NODE_ENV=production`
+- Server URL: `https://sports-arena-backend.onrender.com`
+- Frontend URL: `https://sports-arena-frontend.vercel.app/`
+- Configure production MongoDB URI
+- Set secure JWT secret
+- Update CORS settings for production domain
 
 ### **Database Configuration**
 - **MongoDB Connection** - Automatic connection management
@@ -287,7 +296,10 @@ server/
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
-   
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ## 👨‍💻 Developer
 
